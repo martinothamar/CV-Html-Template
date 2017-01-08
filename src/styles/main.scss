@@ -1,0 +1,452 @@
+$primary: #0395de;
+$grey: #4d4d4d;
+
+$normal: 'texgyreherosregular';
+$bold: 'texgyreherosbold';
+$light: 'latolight';
+
+@font-face {
+    font-family: 'texgyreherosregular';
+    src: url('fonts/texgyreheros_regular/texgyreheros-regular-webfont.eot');
+    src: url('fonts/texgyreheros_regular/texgyreheros-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreheros_regular/texgyreheros-regular-webfont.woff') format('woff'),
+         url('fonts/texgyreheros_regular/texgyreheros-regular-webfont.ttf') format('truetype'),
+         url('fonts/texgyreheros_regular/texgyreheros-regular-webfont.svg#texgyreherosregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texgyreherosbold';
+    src: url('fonts/texgyreheros_bold/texgyreheros-bold-webfont.eot');
+    src: url('fonts/texgyreheros_bold/texgyreheros-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreheros_bold/texgyreheros-bold-webfont.woff') format('woff'),
+         url('fonts/texgyreheros_bold/texgyreheros-bold-webfont.ttf') format('truetype'),
+         url('fonts/texgyreheros_bold/texgyreheros-bold-webfont.svg#texgyreherosbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('fonts/latolight/Lato-Light.eot');
+    src: url('fonts/latolight/Lato-Light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/latolight/Lato-Light.woff') format('woff'),
+         url('fonts/latolight/Lato-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: $primary;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+b {
+    font-family: $bold;
+}
+
+.sheet {
+    font-family: $normal;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 793px;
+    min-height: 1096px;
+    background-color: #fff;
+    box-shadow: 10px 10px 55px -18px rgba(0,0,0,0.75);
+    display: flex;
+    position:relative;
+    padding: 25px;
+    flex-direction: row;
+    color: $grey;
+    padding-bottom: 40px;
+
+    #mobile-cv-header {
+        display: none;
+    }
+
+    .cv-header {
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-bottom: 30px;
+        position: relative;
+
+        .title {
+            font-family: $normal;
+            margin: 0;
+            width: 50%;
+            margin-left: 50px;
+            font-size: 2.5em;
+            text-align: center;
+
+            .title-first {
+                font-family: $light;
+            }
+        }
+
+        .subtitle {
+            color: $primary;
+            margin: 0;
+            margin-left: 50px;
+            width: 50%;
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        .separator {
+            height: 15px;
+            margin-top: 15px;
+            width: 100%;
+            background-color: $grey;
+        }
+    }
+
+    .left-column {
+        width: 23.8%;
+        flex-direction: column;
+        text-align: left;
+        position: relative;
+
+        img {
+            max-width: 90%;
+            margin-left: 5%;
+        }
+
+        #civil-status {
+            margin-top: 56px;
+        }
+
+        .section {
+            margin-top: 25px;
+
+            .header {
+                font-family: $bold;
+                font-size: 1.2em;
+                color: $primary;
+                margin: 0;
+                padding: 0;
+            }
+
+            .item {
+                font-family: $light;
+                color: $grey;
+                margin: 0;
+                padding: 0;
+                position:relative;
+                display: flex;
+                flex-direction: row;
+                word-break: break-all;
+
+                .left {
+                    text-align: left;
+                    display: flex;
+                    width: 50%;
+                    position: relative;
+                }
+
+                .right {
+                    text-align: right;
+                    display: flex;
+                    width: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    .star {
+                        margin-left: 5%;
+                        width: 15%;
+                        max-width: 20px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            a.item {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            img.item {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        #me {
+            display: block;
+            width: 100%;
+            margin-top: 0px;
+
+            img {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+
+    .right-column {
+        width: 604px;
+        flex-direction: column;
+        font-family: $normal;
+        position: relative;
+
+        #experience {
+            margin-top: 0px;
+        }
+
+        .content {
+            padding-left: 50px;
+            position: relative;
+
+            .header {
+                font-family: $bold;
+                font-size: 1.6em;
+            }
+
+            .records {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                
+                .record {
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    width: 100%;
+                    margin-top: 25px;
+
+                    .left {
+                        min-width: 100px;
+                        width: 100px;
+                        font-size: 0.7em;
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-grow: 1;
+                        flex-direction: column;
+
+                        .record-header {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            .record-left {
+                                font-family: $bold;
+                                font-size: 0.9em;
+                            }
+
+                            .record-right {
+                                color: $primary;
+                                font-size: 0.7em;
+                                text-align: right;
+                            }
+                        }
+
+                        .record-content {
+                            font-family: $light;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .record:first-child {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .sheet-footer {
+        text-align: right;
+        margin-top: 75px;
+
+        p {
+            margin: 0;
+            font-family: $light;
+            font-style: italic;
+        }
+    }
+}
+
+#footer {
+    font-family: $light;
+    margin-top: 25px;
+    height: 50px;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.7;
+
+    a {
+        color: #fff;
+    }
+}
+
+
+@media(max-width: 850px) {
+    .sheet {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+
+        #mobile-cv-header {
+            display: block;
+        }
+
+        .cv-header {
+            padding: 0;
+            width: 100%;
+            position: relative;
+
+            .title {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .subtitle {
+                margin-left: 0px;
+                width: 100%;
+            }
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 25px;
+
+            #civil-status {
+                margin-top: 25px;
+            }
+
+            .section {
+                padding: 5px;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 200px;
+                }
+            }
+
+            #programming {
+                width: 100%;
+            }
+        }
+
+        .right-column {
+            width: 100%;
+            margin-top: 25px;
+
+            .content {
+                padding-left: 0;
+
+                .records {
+                    .record {
+                        .left {
+                            width: 50px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            .cv-header {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 500px) {
+    .sheet {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+
+        #mobile-cv-header {
+            display: block;
+        }
+
+        .cv-header {
+            padding: 0;
+            width: 100%;
+            position: relative;
+
+            .title {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .subtitle {
+                margin-left: 0px;
+                width: 100%;
+            }
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+
+            #civil-status {
+                margin-top: 25px;
+            }
+
+            img {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            .section {
+                padding: 5px;
+                width: 100%;
+            }
+        }
+
+        .right-column {
+            width: 100%;
+            margin-top: 25px;
+
+            .content {
+                padding-left: 0;
+
+                .records {
+                    .record {
+                        .left {
+                            width: 50px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            .cv-header {
+                display: none;
+            }
+        }
+    }
+}

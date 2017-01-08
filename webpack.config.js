@@ -26,8 +26,7 @@ module.exports = {
     },
     output: {
         filename: '[hash].js',
-        path: __dirname + '/dist',
-        publicPath: '/dist/'
+        path: __dirname + '/dist'
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -41,7 +40,7 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            filename: '../index.html',
+            filename: 'index.html',
             // templateContent: fs.readFileSync('./www/index.html', { encoding: 'utf-8' })
             template: './src/index.html'
         }),

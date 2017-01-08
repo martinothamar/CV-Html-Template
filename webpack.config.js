@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var fs = require('fs');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -44,6 +45,7 @@ module.exports = {
             // templateContent: fs.readFileSync('./www/index.html', { encoding: 'utf-8' })
             template: './src/index.html'
         }),
-        new ExtractTextPlugin('[hash].css')
+        new ExtractTextPlugin('[hash].css'),
+        new StyleExtHtmlWebpackPlugin()
     ]
 };

@@ -7,7 +7,7 @@
     "start": "rm -rf dist && webpack -w",
     "build": "rm -rf dist && webpack -p --optimize-dedupe",
     "dev": "node_modules/.bin/webpack-dev-server --content-base dist/",
-    "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git checkout -b gh-pages && git push origin :gh-pages && git subtree push --prefix dist origin gh-pages && git checkout master && git branch -d gh-pages"
   },
   "keywords": [
     "cv",

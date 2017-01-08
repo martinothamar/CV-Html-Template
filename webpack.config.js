@@ -6,7 +6,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const internalCSS = new ExtractTextPlugin('loader.css');
-const externalCSS = new ExtractTextPlugin('[hash].css');
 
 module.exports = {
     entry: {
@@ -15,7 +14,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /loader\.scss/, loader: internalCSS.extract("style", "css!sass") },
-            { test: /\.scss$/, exclude: /loader\.scss/, loader: externalCSS.extract("style", "css!sass") },
+            { test: /\.scss$/, exclude: /loader\.scss/, loaders: ["style-loader", "css-loader", "sass-loader"] },
             { test: /\.(woff|woff2|eot|ttf)(\?.*$|$)/, loader: 'file-loader' },
             {
                 test: /.*\.(gif|png|jpeg|jpg|svg|ico)(\?.*$|$)/i,
@@ -47,7 +46,6 @@ module.exports = {
             template: './src/index.html'
         }),
         internalCSS,
-        externalCSS,
         new StyleExtHtmlWebpackPlugin('loader.css')
     ]
 };

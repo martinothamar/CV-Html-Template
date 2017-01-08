@@ -4,6 +4,7 @@ var fs = require('fs');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+var ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 const internalCSS = new ExtractTextPlugin('loader.css');
 
@@ -46,6 +47,9 @@ module.exports = {
             template: './src/index.html'
         }),
         internalCSS,
-        new StyleExtHtmlWebpackPlugin('loader.css')
+        new StyleExtHtmlWebpackPlugin('loader.css'),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async'
+        })
     ]
 };
